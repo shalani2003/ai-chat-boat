@@ -188,12 +188,7 @@ def send_message(event=None):
     add_message("You", user_message)
     message_entry.delete(0, tk.END)
 
-    key = user_message.lower().strip("?!., ")
-
-    if key in responses:
-        reply = responses[key]
-    else:
-        reply = "Sorry, I don't know the answer to that question."
+    reply = get_bot_reply(user_message)
 
     add_message("Bot", reply)
 
