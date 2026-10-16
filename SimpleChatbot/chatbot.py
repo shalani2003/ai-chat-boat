@@ -41,6 +41,63 @@ rules = [
         "keywords": ["hi"],
         "answer": "Hello! How can I help you?"
     }
+        # Greetings
+    {
+        "keywords": ["good", "morning"],
+        "answer": "Good morning! How can I help you?"
+    },
+    {
+        "keywords": ["good", "afternoon"],
+        "answer": "Good afternoon! How are you today?"
+    },
+    {
+        "keywords": ["good", "evening"],
+        "answer": "Good evening! How was your day?"
+    },
+    {
+        "keywords": ["good", "night"],
+        "answer": "Good night! Sleep well."
+    },
+
+    # Friendly conversations
+    {
+        "keywords": ["how", "is", "your", "day"],
+        "answer": "My day is going well! Thank you for asking."
+    },
+    {
+        "keywords": ["what", "can", "you", "do"],
+        "answer": "I can answer simple questions and have friendly conversations."
+    },
+    {
+        "keywords": ["who", "created", "you"],
+        "answer": "I was created using Python and Tkinter."
+    },
+    {
+        "keywords": ["nice", "to", "meet", "you"],
+        "answer": "Nice to meet you too!"
+    },
+    {
+        "keywords": ["i", "am", "happy"],
+        "answer": "That is wonderful! I am happy to hear that."
+    },
+    {
+        "keywords": ["i", "am", "sad"],
+        "answer": "I am sorry you feel that way. Would you like to talk about it?"
+    },
+
+    # More questions
+    {
+        "keywords": ["what", "is", "your", "favorite", "color"],
+        "answer": "I like purple! It matches my chatbot theme."
+    },
+    {
+        "keywords": ["what", "is", "python"],
+        "answer": "Python is a popular programming language."
+    },
+    {
+        "keywords": ["what", "is", "tkinter"],
+        "answer": "Tkinter is a Python library used to create graphical user interfaces."
+    }
 ]
 # ---------------- FIND BOT REPLY ----------------
 def get_bot_reply(user_message):
