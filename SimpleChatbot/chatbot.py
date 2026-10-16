@@ -11,15 +11,37 @@ USER_BUBBLE = "#6256E8"
 BOT_BUBBLE = "#FFFFFF"
 
 # ---------------- CHATBOT RULES ----------------
-responses = {
-    "hi": "Hello! How can I help you?",
-    "hello": "Hi! Nice to meet you.",
-    "how are you": "I am fine. Thank you!",
-    "what is python": "Python is a popular programming language.",
-    "what is your name": "I am your friendly chatbot.",
-    "bye": "Goodbye! Have a nice day.",
-    "thank you": "You are welcome!"
-}
+# ---------------- CHATBOT KEYWORD RULES ----------------
+rules = [
+    {
+        "keywords": ["how", "are", "you"],
+        "answer": "I am fine. Thank you!"
+    },
+    {
+        "keywords": ["your", "name"],
+        "answer": "I am your friendly chatbot."
+    },
+    {
+        "keywords": ["thank", "you"],
+        "answer": "You are welcome!"
+    },
+    {
+        "keywords": ["python"],
+        "answer": "Python is a popular programming language."
+    },
+    {
+        "keywords": ["bye"],
+        "answer": "Goodbye! Have a nice day."
+    },
+    {
+        "keywords": ["hello"],
+        "answer": "Hi! Nice to meet you."
+    },
+    {
+        "keywords": ["hi"],
+        "answer": "Hello! How can I help you?"
+    }
+]
 
 # ---------------- MAIN WINDOW ----------------
 root = tk.Tk()
