@@ -42,6 +42,26 @@ rules = [
         "answer": "Hello! How can I help you?"
     }
 ]
+# ---------------- FIND BOT REPLY ----------------
+def get_bot_reply(user_message):
+    text = user_message.lower()
+
+    # Remove punctuation
+    for symbol in "?!.,;:":
+        text = text.replace(symbol, " ")
+
+    # Split message into words
+    words = set(text.split())
+
+    # Check each rule
+    for rule in rules:
+        required_keywords = set(rule["keywords"])
+
+        if required_keywords.issubset(words):
+            return rule["answer"]
+
+    # If no rule matches
+    return "Sorry, I don't know the answer to that question."
 
 # ---------------- MAIN WINDOW ----------------
 root = tk.Tk()
